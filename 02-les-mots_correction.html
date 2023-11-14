@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exo d'Algo(3) - Les mots</title>
+    <!-- link href="./bootstrap.min.css" rel="stylesheet" / -->
+    <link href="./style.css" rel="stylesheet" />
+    <script type="text/javascript" src="./tools.js"></script>
+</head>
+<body>
+<!-- a href="index.html">← revenir à la liste des exos</a -->
+<div class="card">
+    <p class="h6 font-weight-bold text-center">#02 - Les mots</p>
+    <div class="instructions">
+        <p class="text-secondary">Saisissez une phrase, puis déclenchez son analyse en cliquant sur le bouton.<br/>
+            Complétez la fonction 'countWords' qui affichera le nombre de mots de la la phrase saisie.
+        </p>
+        <p class="text-secondary">
+            Pour simplifier les choses, on considère, dans un premier temps, que le séparateur de mots est 
+            uniquement le caractère d'espacement.
+        </p>
+        <p class="text-secondary">Si tout se passe normalement :</p>
+        <p class="text-success">countWords ("C'est ma jolie phrase") affichera 4.</p>
+        <p></p>
+        <p class="text-secondary">L'idée est d'illustrer l'utilisation des boucles.<br />
+            Cependant, toute autre solution sera la bienvenue.</p>
+        <p></p>
+        <p><strong>Banco !</strong> : </p>
+        <p class="text-success">countWords ("&nbsp;&nbsp;C'est ma&nbsp;&nbsp;&nbsp;&nbsp;jolie phrase&nbsp;") affichera aussi 4.</p>
+        <p><strong>Super banco !</strong> : </p>
+        <p>En bon linguistique :
+            <ul>
+                <li>il faut également ajouter comme séparateur de mots l'apostrophe ('),</li>
+                <li>se rappeler qu'un nombre écrit en chiffres est considéré comme un mot,</li>
+                <li>savoir ques les caractères de ponctuation (, ; : ? !) ne sont pas des mots mais en sont des séparateurs</li>
+            </ul>
+        </p>
+        <p class="text-success">countWords ("&nbsp;&nbsp;56 ? C'&nbsp;est un&nbsp;&nbsp;&nbsp;&nbsp;joli nombre&nbsp;!&nbsp;") 
+            devra afficher 6.</p>
+    </div>
+
+    <label>Ma phase</label>
+    <br/>
+    <input type="text" id="sentence" placeholder="Votre phrase"/>
+
+    <button type="button" class="btn btn-primary" onclick="countWords()">
+        Compter les mots
+    </button>
+</div>
+
+<script type="text/javascript">
+
+    /* see the course or the statement to get information about this function */
+    function countWords() {
+        let inputText = document.getElementById("sentence").value;
+        let inputLength = inputText.length;
+        let previousChar = ' ';     // previous character storage
+                                    // at starting point, it simulates space character at position -1
+        let count = 0;
+
+        inputText = inputText.replace(/[;:?!,']/g, " "); // suggested insertion to reach the "super banco"
+
+        for (let i=0; i<inputLength; i++){
+            let currentChar = inputText.charAt(i);
+            if ((currentChar !== previousChar) && (previousChar === ' ')) count++;
+            previousChar = currentChar;     // the currect char becomes the previous char for the next iteration
+        }
+        console.log(`Nombre de mots : ${count}`);
+    }
+
+</script>
+
+</body>
+</html>

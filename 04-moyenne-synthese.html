@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exo d'Algo(3) - Moyenne évolutive</title>
+    <link href="./style.css" rel="stylesheet" />
+    <script type="text/javascript" src="./tools.js"></script>
+</head>
+<body>
+<div class="card">
+    <p class="h6 font-weight-bold text-center">#04 - moyenne évolutive</p>
+    <div class="instructions">
+        <p class="text-secondary">Nous allons repartir des travaux faits lors de l'exercice #03 La moyenne.</p>
+        <p class="text-secondary">Le principe de calcul reste identique. Vous réutiliserez donc le code qui calcule 
+            la moyenne de <u>plusieurs</u> notes, arrondie à 2 chiffres après la virgule ; vous choisirez la solution qui utilise 
+            la méthode de boucle de votre choix.<br />
+            <br>
+            Maintenant, il est possible d'ajouter une nouvelle note en remplissant le champ "Nouvelle note" ; ce champ peut rester 
+            vide (pas de nouvelle note enregistrée -> juste un recalcul de la moyenne sur la base des notes déjà connues). 
+            Si une nouvelle note est ajoutée, celle-ci sera mémorisée (après vérification) dans le tableau des notes.<br>
+            Le mécanisme de déclenchement du (re)calcul reste inchangé : evénement 'click' sur le bouton "(Re)calculer la moyenne".
+        </p>
+        <p></p>
+        <p class="text-secondary"><strong>Ce qui change et ce que vous devez faire :</strong>
+            <ul class="text-secondary">
+                <li>Ecrire une fonction <strong>"average"</strong> qui calcule et retourne la moyenne des notes contenues dans un tableau.<br>
+                    Cette fonction sera appelée selon les besoins de la fonction "refreshAverage".<br>
+                    <em>Voir la description et la signature (paramètres/retour) de cette fonction dans le code.</em></li>
+                <li>Ecrire la fonction <strong>"refreshAverage"</strong>. C'est la fonction appelée par 'click' sur le bouton. 
+                    Cette fonction doit :
+                    <ol>
+                        <li>Récupérer le contenu de l'input de type text (vous savez le document.getElem....() !),</li>
+                        <li>Contrôler que le contenu saisi est valide : <strong>nombre compris entre 0 et 20</strong>, sinon envoyer une 
+                            alerte à l'utilisateur et mettre fin à l'exécution de la fonction,</li>
+                        <li>Si le contenu est valide, le ranger dans le tableau des notes, </li>
+                        <li>Lancer le calcul de la moyenne en 
+                            utilisant <em>(appelant)</em> la fonction prévue pour cela et récupérer le résultat du calcul.</li>
+                        <li>Afficher le tableau des notes en utilisant la fonction displayArray qui est mise à 
+                            votre disposition ; cette fonction est appelée en lui passant comme unique paramètre le tableau à afficher 
+                            <em>(pour les curieux, elle est rangée dans tools.js)</em>, 
+                        <li>Enfin, afficher la moyenne.</li>
+                        </li>
+                    </ol>
+                </li>
+
+            </ul>
+        </p>
+        <p class="text-secondary">Si tout se passe normalement :</p>
+        <p class="text-success">Au fur et à mesure de la saisie de notes, vous devez voir le tableau et la moyenne évoluer !<br>
+        Bien évidemment, les choses sont remises à l'état initial (tableau de départ) après chaque rechargement de la page.</p>
+        <p></p>
+    </div>
+
+    <label>Nouvelle note ?</label>
+    <input type="text" id="note" placeholder="Nouvelle note (optionnelle)"/>
+    <button type="button" class="btn btn-primary" onclick="refreshAverage()">
+        (Re)calculer la moyenne
+    </button>
+</div>
+
+<script type="text/javascript">
+
+    // notes de départ
+    let notes = [8.75, 14, 13, 5.5];
+
+    /*
+     * La fonction "avearge" calcule la moyenne des notes contenues dans un tableau 
+     * (s'inspirer de l'exercice #03 - La moyenne pour renseigner cette fonction)
+     * Parametres : tableau qui contient les notes
+     * Retour : la moyenne calculée
+     */
+
+    function average() {
+        // CODE HERE !
+
+    }
+    /*
+     * Fonction appelée lors du 'clic' sur le bouton
+     * Parameters: 
+     * Return:
+     */
+
+    function refreshAverage() {
+        // CODE HERE !
+
+    }
+
+</script>
+</body>
+</html>

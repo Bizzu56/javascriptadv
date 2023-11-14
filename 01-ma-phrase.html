@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exo d'Algo(3) - Ma phase</title>
+    <!-- link href="./bootstrap.min.css" rel="stylesheet" / -->
+    <link href="./style.css" rel="stylesheet" />
+    <script type="text/javascript" src="./tools.js"></script>
+</head>
+<body>
+<!-- a href="index.html">← revenir à la liste des exos</a -->
+<div class="card">
+    <p class="h6 font-weight-bold text-center">#01 - Ma phrase</p>
+    <div class="instructions">
+        <p class="text-secondary">Saisissez une phrase, puis déclenchez son analyse en cliquant sur le bouton.<br/>
+            Complétez la fonction 'analyse' qui devra retourner un tableau (Array) contenant les 4 éléments suivants :
+        </p>
+        <ul>
+            <li>le nombre de caractères de la phrase,</li>
+            <li>le 5ième caractère de la phrase,</li>
+            <li>une chaine de caractères contenant les 3 premiers caractères de la phrase,</li>
+            <li>une chaine de caractères contenant les 3 derniers caractères de la phrase.</li>
+        </ul>
+        <p class="text-secondary">
+            Indices et conseils :
+        </p>
+        <ol>
+            <li><b>Avant de commencer</b> à coder, en vous appuyant sur MDN Web Docs (ou équivalent) :
+                <ul>
+                    <li>étudier l'objet Javascript String (ses propriétés et surtout ses méthodes)</li>
+                    <li>étudier l'objet Javascript Array (ses propriétés et surtout ses méthodes)</li>
+                </ul>
+            </li>
+            <li>Pour démarrer votre code :<br/>
+                Vérifier que la phrase contient au moins 5 caractères, sous peine d'avoir quelques soucis...<br/>
+                Si ce n'est pas le cas, la fonction devra retourner un tableau ne contenant que le premier élément demandé, 
+                c'est à dire le nombre de caractères de la phrase</li>
+        </ol>
+        <p class="text-secondary">Si tout se passe normalement :</p>
+        <p class="text-success">Une alerte affichera le contenu de votre tableau d'analyse."</p>
+    </div>
+
+    <label>Ma phase</label>
+    <br/>
+    <input type="text" id="sentence" placeholder="Votre phrase"/>
+
+    <button type="button" class="btn btn-primary" onclick="analyze()">
+        Analyser la phrase
+    </button>
+</div>
+
+<script type="text/javascript">
+
+    function analyze() {
+        // CODE HERE !
+    }
+
+</script>
+</body>
+</html>
